@@ -50,6 +50,7 @@ endif()
 
 find_package(orocos-ocl REQUIRED)
 find_package(orocos_kdl REQUIRED)
+find_package(eigen_conversions REQUIRED)
 
 
 find_package(RST-RT REQUIRED)
@@ -65,7 +66,8 @@ include_directories(include
                     ${XBotInterface_INCLUDE_DIRS}
                     ${EIGEN3_INCLUDE_DIRS}
                     ${USE_OROCOS_INCLUDE_DIRS}
-                    ${RST-RT_INCLUDE_DIRS})
+                    ${RST-RT_INCLUDE_DIRS}
+                    ${eigen_conversions_INCLUDE_DIRS})
                         
 file(GLOB_RECURSE XBotInterfaceOROCOS_INCLUDES "${CMAKE_CURRENT_SOURCE_DIR}/include" *.h*)
 
